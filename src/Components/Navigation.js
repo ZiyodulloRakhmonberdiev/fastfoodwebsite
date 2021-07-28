@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import avatar from '../images/avatar.jpg';
+import avatar from '../images/port.jpg';
 import {NavLink} from 'react-router-dom'
 
 function Navigation() {
@@ -52,12 +52,21 @@ const NavigationStyled = styled.nav`
        width: 80%;
        padding: 1rem 0;
        border-bottom: 1px solid var(--border-color);
+
        img{
            width: 100%;
            border-radius: 50%;
            border: 8px solid var(--border-color);
+           transition: .4s;
+           &:hover{
+               transform: scale(1.1);
+               z-index: 30;
+               border-color: var(--primary-color);
+               }
+               
+
+           }
        }
-   }
    ul{
     width: 100%;
     text-align: center;

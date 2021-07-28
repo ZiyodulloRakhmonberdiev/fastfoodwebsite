@@ -15,9 +15,16 @@ const TitleStyled = styled.div`
         color: var(--white-color);
         font-size: 2.8rem;
         font-weight: 600;
-        text-transform: uppercase;
         position: relative;
+        text-transform: uppercase;
         padding-bottom: .8rem;
+        @media screen and (max-width: 450px){
+            font-size: 2.8rem;
+        }
+        @media screen and (max-width: 350px){
+            width: 100%;
+            font-size: 2rem;
+        }
         &::before{
             content: " ";
             position: absolute;
@@ -45,9 +52,17 @@ const TitleStyled = styled.div`
             top: 15%;
             left: 5%;    
             font-weight: 600;
-            color: rgba(25, 29, 43, .95);
+            color: var(--span-color);
             font-size: 3.8rem;
             z-index: -1;
+            opacity: 0.3;
+            @media screen and (max-width: 650px){
+               font-size: 4rem;
+            @media screen and (max-width: 450px){
+               font-size: 3rem;
+            @media screen and (max-width: 350px){
+               font-size: 1rem;
+    }
 
         }
     }

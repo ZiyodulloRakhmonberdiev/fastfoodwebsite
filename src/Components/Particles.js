@@ -1,7 +1,7 @@
 import React from 'react'
 import Particles from 'react-particles-js';
 
-function Particles() {
+function Particless() {
     return (
         <>
             <Particles width="100%" height="100vh"

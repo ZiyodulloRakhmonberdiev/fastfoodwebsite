@@ -1,8 +1,15 @@
 import React from 'react'
+import Resume from '../Components/Resume'
+import Skills from '../Components/Skills'
+import Title from '../Components/Title';
+import {MainLayout, InnerLayout} from '../styles/Layout';
 
 function ResumePage() {
     return (
-        <h1>cekj</h1>
+        <MainLayout>
+            <Skills />
+            <Resume />
+        </MainLayout>
     )
 }
 

@@ -9,13 +9,13 @@ import YouTubeIcon from '@material-ui/icons/YouTube';
 function HomePage() {
     return (
         <HomePageStyled>
-            <div className="p-particles-js">
-                {/* <Particles /> */}
+             <div className="p-particles-js">
+                <Particles />
             </div>
             <div className="typography">
                 <h1>Hi, I'm  <span>Ziyodullo Rakhmonberdiev</span></h1>
                 <p>
-                Ingliz tilidan tarjima qilingan-Google Fonts - bu mingdan ortiq bepul va ochiq kodli shriftlar oilasi, kutubxonani ko'rib chiqish uchun interaktiv veb-katalog va shriftlardan CSS va Android orqali foydalanish uchun API. Veb-sayt 135 dan ortiq tillarda mavjud
+                Hello there. I am a Web Programmer, Web and Graphic Designer. You have the opportunity to get acquainted with my work through the site. If you have an offer or order, you can contact me through the following social networks. Before you get in touch, pay attention to what field I work in. I wish you an interesting day / night. Sincerely, Ziyodullo Rakhmonberdiev    
                 </p>
                 <div className="icons">
                     <a target="_blank" href="https://www.facebook.com/ziyodullo.rakhmanberdiyev/" className="icon facebook">
@@ -44,9 +44,11 @@ const HomePageStyled = styled.header`
     height: 100vh;
     position: relative;
     .p-particles-js{
-        position: absolute;
         top: 0;
         left: 0;
+        @media screen and (max-width: 992px){
+            display: none;
+        }
     }
     .typography{
         position: absolute;
@@ -55,6 +57,15 @@ const HomePageStyled = styled.header`
         transform: translate(-50%, -50%);
         text-align: center;
         width: 80%;
+        @media screen and (max-width: 360px){
+                h1{
+                    font-size: 1.5rem;
+
+                    span{
+                        font-size: 1.5rem;
+                    }
+                }
+            }
         .icons{
             display: flex;
             margin-top: 2rem;
