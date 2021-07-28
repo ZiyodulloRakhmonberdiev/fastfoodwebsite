@@ -114,7 +114,7 @@ const GlobalStyle = createGlobalStyle`
         z-index: 15;
     }
     .nav-toggle{
-        transform: translateX(1px);
+        transform: translateX(0px);
       
     }
     //Global Media Queries
