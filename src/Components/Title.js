@@ -18,10 +18,13 @@ const TitleStyled = styled.div`
         position: relative;
         text-transform: uppercase;
         padding-bottom: .8rem;
-        @media screen and (max-width: 450px){
-            font-size: 2.8rem;
+        @media screen and (max-width: 1200px){
+            padding-top: 3rem; 
         }
-        @media screen and (max-width: 350px){
+        @media screen and (max-width: 450px){
+            font-size: 2.4rem;
+        }
+        @media screen and (max-width: 400px){
             width: 100%;
             font-size: 2rem;
         }
@@ -60,7 +63,7 @@ const TitleStyled = styled.div`
                font-size: 4rem;
             @media screen and (max-width: 450px){
                font-size: 3rem;
-            @media screen and (max-width: 350px){
+            @media screen and (max-width: 400px){
                font-size: 1rem;
     }
 

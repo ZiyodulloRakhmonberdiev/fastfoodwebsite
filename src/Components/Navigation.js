@@ -1,44 +1,52 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import avatar from '../images/port.jpg';
-import {NavLink} from 'react-router-dom'
+import {NavLink} from 'react-router-dom';
 
-function Navigation() {
-    return (
-        <NavigationStyled>
-            <div className="avatar">
-                <img src={avatar} />
-            </div>
-            <ul>
-                <li>
-                    <NavLink to="/" activeClassName="active-class" exact>Home</NavLink>
-                </li>
-                <li>
-                    <NavLink to="/about" activeClassName="active-class" exact>About</NavLink>
-                </li>
-                <li>
-                    <NavLink to="/resume" activeClassName="active-class" exact>Resume</NavLink>
-                </li>
-                <li>
-                    <NavLink to="/portfolios" activeClassName="active-class" exact>Portfolios</NavLink>
-                </li>
-                <li>
-                    <NavLink to="/blogs" activeClassName="active-class" exact>Blogs</NavLink>
-                </li>
-                <li>
-                    <NavLink to="/contact" activeClassName="active-class" exact>Contact</NavLink>
-                </li>
-            </ul>
-            <footer>
-                <p>
-                    @2021 My Portfolio Website
-                </p>
-            </footer>
-        
-        </NavigationStyled>        
-    )
+class Navigation extends Component {
+    state={
+        isOpen: false
+    }
+    handleToggle = () => {
+        this.setState({isOpen:!this.state.isOpen})
+    }
+    render(){
+        return (
+            <NavigationStyled>
+                <div className="avatar">
+                    <img src={avatar} alt="profilePhoto"/>
+                </div>
+                <ul  className={this.state.isOpen?"nav-toggle":""}>
+                    <li>
+                        <NavLink to="/home" activeClassName="active-class" exact>Home</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/about" activeClassName="active-class" exact>About</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/resume" activeClassName="active-class" exact>Resume</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/portfolios" activeClassName="active-class" exact>Portfolios</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/blogs" activeClassName="active-class" exact>Blogs</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/contact" activeClassName="active-class" exact>Contact</NavLink>
+                    </li>
+                </ul>
+                <footer>
+                    <p>
+                        @2021 My Portfolio Website
+                    </p>
+                </footer>
+            
+            </NavigationStyled>         
+        )
+    }
 }
-
+    
 const NavigationStyled = styled.nav`
    display : flex;
    flex-direction: column;
@@ -57,14 +65,6 @@ const NavigationStyled = styled.nav`
            width: 100%;
            border-radius: 50%;
            border: 8px solid var(--border-color);
-           transition: .4s;
-           &:hover{
-               transform: scale(1.1);
-               z-index: 30;
-               border-color: var(--primary-color);
-               }
-               
-
            }
        }
    ul{

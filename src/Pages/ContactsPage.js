@@ -42,7 +42,7 @@ function ContactsPage() {
                     </div>
                     <div className="right-content">
                         <ContactItem  icon={phone} title={'Phone'} contact={'+99891 670 67 80'} />
-                        <ContactItem  icon={email} title={'Email'} contact={'@ziyodillo808@gmail.com'} />
+                        <ContactItem  icon={email} title={'Email'} contact={'@ziyodillo808@ gmail.com'} />
                         <ContactItem  icon={address} title={'Address'} contact={'Anorzor 1, Margilan city, Ferghana, Uzbekistan'} />
                     </div>
                 </InnerLayout>
@@ -65,8 +65,9 @@ const ContactsPageStyled = styled.section`
             display: flex;
             flex-direction: column;
             @media screen and (max-width: 650px){
-                width: 90%;
-        }
+                width: 94%;
+
+            }
         }
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -82,8 +83,8 @@ const ContactsPageStyled = styled.section`
             position: relative;
             width: 100%;
             @media screen and (max-width: 650px){
-                width: 90%;
-        }
+                width: 100%;
+            }
             label{
                 position: absolute;
                 top: -1.1rem;

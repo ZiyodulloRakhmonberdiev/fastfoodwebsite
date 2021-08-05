@@ -113,17 +113,9 @@ const GlobalStyle = createGlobalStyle`
         display: none;
         z-index: 15;
     }
-    .nav-toggle{
-        transform: translateX(0px);
-      
-    }
+    
     //Global Media Queries
-    @media screen and (max-width: 1200px){
-        .menu-icon{
-            display: block;
-        }
-    }
 
-`;
+`
 
 export default GlobalStyle;

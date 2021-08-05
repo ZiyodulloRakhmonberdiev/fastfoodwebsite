@@ -28,8 +28,15 @@ const ContactItemStyled = styled.div`
         padding: 1rem;
         margin-right: 1rem;
         border: 1px solid var(--border-color);
+        @media screen and (max-width: 650px){
+            padding: 1rem;
+            margin-right: 1rem;
+            }
         svg{
             font-size: 2.3rem;
+            @media screen and (max-width: 650px){
+                font-size: 1.5rem;
+            }
         }
     }
     .right-content{

@@ -6,7 +6,7 @@ function ImageSection() {
     return (
         <ImageSectionStyled>
             <div className="left-content">
-                <img src={resume} alt="resume photo" />
+                <img src={resume} alt="resumePhoto" />
             </div>
             <div className="right-content">
                 <div className="sub-title">
@@ -18,7 +18,7 @@ function ImageSection() {
                             <p>Nationality</p>
                             <p>Languages</p>
                             <p>Location</p>
-                            <p>Services</p>
+                            <p className="services">Services</p>
                         </div>
                         <div className="info">
                             <p>: Ziyodullo Rakhmonberdiev</p>
@@ -76,10 +76,11 @@ const ImageSectionStyled = styled.div`
     .right-content{
         .label{
             display: none;
-            @media screen and (max-width: 360px){
+            @media screen and (max-width: 539px){
                 display: block  ;
             }
         }
+        width: 60%;
         h4{
             font-size: 2rem;
             color: var(--white-color);
@@ -92,15 +93,21 @@ const ImageSectionStyled = styled.div`
             display: flex;
             
             .info-title{
-                padding-right: 3rem;
+                padding-right: 2rem;
                 p{
                     font-weight: 600;
                 }
+               @media screen and (max-width: 540px){
+                .services{
+                    margin-top: 1.2rem;
+                }
+               }
             }
+           
             .info-title , .info{
-                @media screen and (max-width: 360px){
+                @media screen and (max-width: 539px){
                 display: none  ;
-            }
+                }
                 p{
                     padding: .3rem 0;
                 }  

@@ -43,6 +43,7 @@ const HomePageStyled = styled.header`
     width: 100%;
     height: 100vh;
     position: relative;
+  
     .p-particles-js{
         top: 0;
         left: 0;
@@ -57,12 +58,26 @@ const HomePageStyled = styled.header`
         transform: translate(-50%, -50%);
         text-align: center;
         width: 80%;
-        @media screen and (max-width: 360px){
+        @media screen and (max-width: 1200px){
+            padding-top: 9rem;
+        }
+        @media screen and (max-width: 576px){
+            padding-top: 1px;
                 h1{
-                    font-size: 1.5rem;
+                    font-size: 1.8rem;
 
                     span{
-                        font-size: 1.5rem;
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+        @media screen and (max-width: 430px){
+            
+                h1{
+                    font-size: 1.2rem;
+
+                    span{
+                        font-size: 1.2rem;
                     }
                 }
             }
@@ -86,6 +101,10 @@ const HomePageStyled = styled.header`
                 }
                 svg{
                     margin: .5rem ;
+                    @media screen and (max-width: 430px){
+                        font-size: 1rem;
+                    }
+
                 }
             }
             .youtube{

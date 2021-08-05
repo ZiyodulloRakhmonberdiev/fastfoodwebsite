@@ -1,6 +1,4 @@
 import React, {useState, useEffect} from "react";
-import ReactDom from 'react-dom';
-import './index.css';
 import styled from 'styled-components'
 import Sidebar from "./Components/Sidebar";
 import HomePage from "./Pages/HomePage";
@@ -12,15 +10,12 @@ import ContactsPage from "./Pages/ContactsPage";
 import {Switch as Switching, Route} from 'react-router';
 import BrightnessMediumIcon from '@material-ui/icons/BrightnessMedium'; 
 import Switch from '@material-ui/core/Switch';
-import MenuIcon from '@material-ui/icons/Menu';
-import { IconButton } from "@material-ui/core";
-import Navigation from "./Components/Navigation";
+import Navbar from "./Components/Navbar"
 
 
 function App() {
   const [theme, setTheme] = useState('dark-theme');
   const [checked, setChecked] = useState(false);
-  const [navToggle, setNavToggle] = useState(false)
  useEffect(()=> {
   document.documentElement.className = theme; 
  },[theme])
@@ -37,8 +32,8 @@ function App() {
   return (
     
       <div className="App">
-
-        <Sidebar  navToggle={navToggle} />
+        <Navbar />
+        <Sidebar/>
         <MainContentStyled>
           <div className="lines">
             <div className="line-1"></div>         
@@ -46,19 +41,14 @@ function App() {
             <div className="line-3"></div>         
             <div className="line-4"></div>         
           </div>
-
-          <div className="menu-icon" >
-            <IconButton onClick={() => setNavToggle(!navToggle)}>
-              <MenuIcon />
-            </IconButton>
-          </div>
+          
           <div className="theme">
             <div className="left">
               <BrightnessMediumIcon />
             </div>
             <div className="right">
               <Switch
-              // value=''
+              value=''
               ariaProps={{'aria-label': ''}}
               checked={checked}
               onClick={themeToggler}
@@ -68,7 +58,7 @@ function App() {
             </div>
           </div>
           <Switching>
-            <Route path="/" exact>
+            <Route path="/home" exact >
               <HomePage />
             </Route>
             <Route path="/about" exact>
@@ -89,20 +79,16 @@ function App() {
           </Switching>
           
         </MainContentStyled>
-      </div>
+        </div>
   );
 }
 const MainContentStyled = styled.main`
   position: relative;
   margin-left: 12.3rem;
-  min-height: 100vh;
-  
-
   .theme  {
     position: fixed;
     right: 0;
     top: 30%;
-    /* width: 5rem; */
     height: 2rem;
     display: flex;
     background-color: var(--background-light-color-2);
@@ -111,9 +97,9 @@ const MainContentStyled = styled.main`
     z-index: 15;
     padding: .5rem   1rem;
     border-radius: 1rem;
-    @media screen and (max-width:360px){
-      top:3%;
-      right: 30%;
+    @media screen and (max-width:576px){
+      top:30%;
+      right: 0;
     }
     svg{
       display: flex;
@@ -124,10 +110,20 @@ const MainContentStyled = styled.main`
   .menu-icon{
     position: fixed;
     right: 10%;
+    &:focus, &:active{
+      color: red;
+    }
     svg{
       font-size: 3rem;
+      @media screen and (max-width: 576px){
+        font-size: 2rem;
+      }
     }
   }
+  .nav-toggle{
+        transform: translateX(0);
+      
+    }
   .lines{
     position: absolute;
     min-height: 100%;

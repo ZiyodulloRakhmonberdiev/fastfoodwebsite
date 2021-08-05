@@ -22,6 +22,7 @@ const ResumeItemStyled = styled.div`
     .left-content{
         @media screen and (max-width: 560px){
             width: 100%;
+            padding: 1rem;
     }
         width: 50%;
         position: relative;
@@ -41,14 +42,12 @@ const ResumeItemStyled = styled.div`
         }
     }
     .right-content{
-        @media screen and (max-width: 500px){
+        @media screen and (max-width: 560px){
             width: 100%;
     }
         
         width: 100%;
-        margin-left: 5rem;
         position: relative;
-        padding-right: 1rem;
         @media screen and (max-width: 992px){
                 &::before{
                     display: none;

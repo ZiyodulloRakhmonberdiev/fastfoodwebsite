@@ -14,29 +14,7 @@ function Resume() {
             <ResumeStyled>
                 <Title title={'Resume'} span={'Resume'} />
                 <InnerLayout>
-                    {/* <SmallTitle icon={briefcase}  title={'Working Experience'}/>
-                    <div className="resume-content">
-                        <ResumeItem
-                        year={'2019 - Present'}
-                        title={'Computer Science'}
-                        subtitle={'Marg\'ilon Raqamli Texnologiyalar Markazi'}
-                        text={"Hi there! Sign up to receive my latest and greatest articles! I promise to never abuse your inbox or sell your info. That's just rude. Never Miss a Great Post. Hi there! Sign up to receive my latest and greatest articles! I promise to never abuse your inbox or sell your info. That's just rude. Never Miss a Great Post."}
-                        />
-                        <ResumeItem
-                        year={'2019 - Present'}
-                        title={'Computer Science'}
-                        subtitle={'Marg\'ilon Raqamli Texnologiyalar Markazi'}
-                        text={"Hi there! Sign up to receive my latest and greatest articles! I promise to never abuse your inbox or sell your info. That's just rude. Never Miss a Great Post. Hi there! Sign up to receive my latest and greatest articles! I promise to never abuse your inbox or sell your info. That's just rude. Never Miss a Great Post."}
-                        />
-                        <ResumeItem
-                        year={'2019 - Present'}
-                        title={'Computer Science'}
-                        subtitle={'Marg\'ilon Raqamli Texnologiyalar Markazi'}
-                        text={"Hi there! Sign up to receive my latest and greatest articles! I promise to never abuse your inbox or sell your info. That's just rude. Never Miss a Great Post. Hi there! Sign up to receive my latest and greatest articles! I promise to never abuse your inbox or sell your info. That's just rude. Never Miss a Great Post."}
-                        />
-                    </div> */}
                     <SmallTitle icon={education}  title={'Education Experience'} className="edu"/>
-
                     <div className="resume-content">
                         <ResumeItem
                         year={'2007 - 2011'}
@@ -87,7 +65,6 @@ function Resume() {
                         text={"There are plenty of resources available today to learn programming. The basis of my computer skills is the YouTube network. The people I can call my mentors are: Akmal Kadyrov, Samar Badriddinov, Javohir Group, Ulugbek Samigdjanov, AliTech, Farhod Dadajonov, Saidbek Arislonov, Saud Abdulwahed, Botir Ziyatov and others. Since there are so many foreign IT teachers, I didn’t list them "}
                         />
                     </div>
-
                 </InnerLayout>
             </ResumeStyled>
     )
@@ -95,7 +72,7 @@ function Resume() {
 const ResumeStyled = styled.div`
     .resume-content, .education-content{
         border-left: 1px solid var(--border-color);
-        padding-left: 1rem;
+        padding: 0  1rem;
         margin-top: 1rem;
         .edu{
         padding: 5rem 0;
